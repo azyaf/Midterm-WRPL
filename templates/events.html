@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'sidebar.html' %}
+    <div class="content">
+        <h2>Event Listings</h2>
+        <form method="get">
+            <input type="text" name="search" placeholder="Search events..." value="{{ search }}">
+            <button type="submit">Search</button>
+        </form>
+        <ul>
+        {% for event in events %}
+            <li>
+                <strong>{{ event.name }}</strong> - {{ event.date }} at {{ event.time }}<br>
+                <a href="{{ url_for('order', event_id=event.event_id) }}">Book Now - Rp{{ event.price }}</a>
+            </li>
+        {% else %}
+            <p>No events found.</p>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

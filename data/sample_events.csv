@@ -1,0 +1,4 @@
+event_id,name,category,date,time,mode,location,price,capacity
+EVT001,Symphony Under the Stars,Music,2025-06-21,19:00,Offline & Online,Taman Budaya Jakarta,150.00,500
+EVT002,Teater Monolog "Dinding",Theater,2025-07-05,20:00,Offline,Gedung Kesenian Solo,75.00,300
+EVT003,World Dance Virtual Fest,Culture,2025-06-15,18:00,Online Only,-,50.00,99999

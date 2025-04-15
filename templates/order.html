@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Ticket</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'sidebar.html' %}
+    <div class="content">
+        <h2>Order for {{ event.name }}</h2>
+        <form method="post">
+            Name: <input type="text" name="name" required><br>
+            Quantity: <input type="number" name="quantity" min="1" value="1" required><br>
+            <button type="submit">Confirm Order</button>
+        </form>
+    </div>
+</body>
+</html>
