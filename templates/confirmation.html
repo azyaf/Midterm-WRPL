@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'sidebar.html' %}
+    <div class="content">
+        <h2>Order Confirmed!</h2>
+        <p>Thank you, {{ name }}.</p>
+        <p>Total Paid: Rp{{ total }}</p>
+        <p>Your ticket has been booked.</p>
+    </div>
+</body>
+</html>
